@@ -260,16 +260,16 @@ void close_elf(int elf)
 }
 
 /**
- * mainfile =>  Displays the informations containeds in the
- * ELF head at the start of an ELF files.
+ * main - Display the informations containeds in the
+ * ELF head at the start of an ELF filee.
  *
- * @argc => The number of arguments supplied to the program.
- * @argv => An array of pointers to the arguments.
+ * @argc: The number of arguments supplied to the program.
+ * @argv: An array of pointers to the arguments.
  *
- * Return: 0 on true  value.
+ * Return: 0 on success.
  *
- * Description: If the file is not an ELF File or
- * the function fails - exit code 98.
+ * Descriptions: if the files is not a ELF Files or
+ * the functions fails - exit code 98 ..
  */
 int main(int __attribute__((__unused__)) argc, char *argv[])
 {
