@@ -165,7 +165,12 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 	if (r == -1)
 	{
 		free(header);
-		close_elf(o);
+		if (close(o) == -1)
+		{
+			dprintf(STDERR_FILENO,
+				"Error: Can't close fd %d\n", o);
+			exit(98);
+		}
 		dprintf(STDERR_FILENO, "Error: `%s`: No such file\n", argv[1]);
 		exit(98);
 	}
