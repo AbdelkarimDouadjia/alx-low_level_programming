@@ -210,7 +210,7 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 	default:
 		printf("<unknown: %x>\n", header->e_ident[EI_OSABI]);
 	}
-	
+
 
 
 
@@ -245,7 +245,7 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 		printf("<unknown: %x>\n", header->e_type);
 	}
 
-	
+
 
 
 
@@ -269,7 +269,7 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 
 	free(header);
 
-	
+
 
 	if (close(o) == -1)
 	{
