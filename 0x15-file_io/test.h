@@ -5,7 +5,7 @@
 #include <unistd.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include 'main.h'
+#include "main.h"
 
 void print_abi(unsigned char *e_ident);
 void print_osabi(unsigned char *e_ident);
