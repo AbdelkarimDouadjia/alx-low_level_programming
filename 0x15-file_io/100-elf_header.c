@@ -152,7 +152,12 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 	header = malloc(sizeof(Elf64_Ehdr));
 	if (header == NULL)
 	{
-		close_elf(o);
+		if (close(o) == -1)
+		{
+			dprintf(STDERR_FILENO,
+				"Error: Can't close fd %d\n", o);
+			exit(98);
+		}
 		dprintf(STDERR_FILENO, "Error: Can't read file %s\n", argv[1]);
 		exit(98);
 	}
